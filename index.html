@@ -6,7 +6,7 @@
     <title>Flex self practice</title>
     <style>
         .container{
-        border: 1px solid tomato;
+        /* border: 1px solid tomato; */
         width: 90%;
         margin: 0 auto;
         display: flex;
@@ -14,18 +14,47 @@
         gap: 20px;
         flex-direction: row;
         }
-        img{
-            max-height: 250px;
+
+        .container img{
+            height: auto;
             width: 100%;
+            /* border: 1px solid orange; */
+        }
+        .container-2{
+            margin: 20px auto;
+            /* border: 2px solid rgb(170, 17, 17); */
+            width: 90%;
+            display: flex;
+            text-align: center;
+            justify-content: space-between;
+            gap: 20px;
+            align-items: top;
+        }
+        .content-section{
+            /* padding: 20px; */
+        }
+        
+        .content-section, .image-section{
+            /* border: 1px solid green; */
+            width: 50%;
+        }
+        .image-section img{
+            width: 100%;
+            height: auto;
         }
 
         @media screen and (max-width: 600px) {
-        .container{
+        .container, .container-2{
             flex-direction: column;
         }
-        img{
+        .container img{
+            max-height: 200px; 
+        }
+        .container-2 div{
+            width: 100%;
+        }
+        .container-2 div img{
             max-height: 200px;
-            
         }
         }
 
@@ -36,8 +65,17 @@
     <img src="Images/Rectangle 8 (1).png" class="img-1" alt="">          
     <img src="Images/Rectangle 10.png" class="img-2" alt="">
     </div>
+    
     <div class="container-2">
-
+        <div class="content-section">
+            <h1 class="content-title">Checking responsive flex </h1>
+            <p class="content-description">Participating in tours with us can offer a variety of benefits, depending on the type of tour and individual preferences. Here are some common advantages:
+            pre-negotiated rates for accommodations and attractions can sometimes make tours more cost-effective than planning each element independently.</p>
+            <button class="btn-primary">Read More</button>
+        </div>
+        <div class="image-section">
+            <img src="Images/Rectangle 6.png" alt="">
+        </div>
     </div>
 </body>
 </html>
